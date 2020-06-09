@@ -29,7 +29,7 @@ function makeGrid(height, width) {
 
 //Adds a color to the clicked on cell 
 function addCellClickListener() {
-    $('td').click( event => {
+    $('td').mousedown( event => {
         let color = $colorPicker.val();
         $(event.currentTarget).css("background-color", color)
     });

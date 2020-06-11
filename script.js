@@ -1,9 +1,9 @@
-"use strict";
 
 const $tableElement = $('#pixelCanvas');
 const $inputHeight = $('#inputHeight');
 const $inputWidth = $('#inputWidth');
 const $colorPicker = $('#colorPicker');
+const $removeGrid = $('#removeGrid')
 
 $('#sizePicker').submit( event => {
     event.preventDefault();
@@ -29,8 +29,25 @@ function makeGrid(height, width) {
 
 //Adds a color to the clicked on cell 
 function addCellClickListener() {
-    $('td').mousedown( event => {
+    $('td').click( event => {
         let color = $colorPicker.val();
         $(event.currentTarget).css("background-color", color)
     });
 };
+// eracer 
+// function eracer() {
+//     $('td').click( event => {
+//         let color = $colorPicker.val();
+//         $(event.currentTarget).css("background-color", "white")
+//     });
+// };
+
+//removes the grid 
+$("#removeGrid").click(function(){
+    $('table tr td').addClass('opacity');
+  });
+//adds grid back 
+$("#returnGrid").click(function(){
+    $('table tr td').removeClass('opacity');
+  });
+

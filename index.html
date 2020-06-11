@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Pixel Art Maker!</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Andrew's Pixel Art Maker</h1>
-    
-        <h2>Choose Grid Size</h2>
-        <form id="sizePicker">
-            Grid Height:
-            <input type="number" id="inputHeight" name="height" min="16" max="32" value="32">
-            Grid Width:
-            <input type="number" id="inputWidth" name="width" min="16" max="32" value="32">
-            <input type="submit">
-        </form>
-    
-        <h2>Pick A Color</h2>
-        <input type="color" id="colorPicker">
-    
-        <h2>Create Here!</h2>
-        <table id="pixelCanvas"></table>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Andrew's Pixel Art Maker</h1>
+
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="16" max="32" value="32">
+        Grid Width:
+        <input type="number" id="inputWidth" name="width" min="16" max="32" value="32">
+        <input type="submit">
+    </form>
+    <div>
+        <h3>Tools</h3>
+        <p>Select a Color
+            <input type="color" id="colorPicker">
+        </p>
+
+        <input type="submit" id="removeGrid" value="Remove Grid">
+        <br>
+        <input type="submit" id="returnGrid" value="Restore Grid">
+        
+    </div>
+
+
+    <h2>Create Here!</h2>
+    <table id="pixelCanvas"></table>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
